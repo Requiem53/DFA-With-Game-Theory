@@ -1,0 +1,323 @@
+[gd_scene load_steps=9 format=3 uid="uid://4dxdjsmqos28"]
+
+[ext_resource type="Texture2D" uid="uid://d0sx5h7kiphqa" path="res://Assets/Characters/1.png" id="1_kpw1p"]
+[ext_resource type="Texture2D" uid="uid://cjokkvowvfpol" path="res://Assets/Characters/2.png" id="2_f5l2t"]
+[ext_resource type="Texture2D" uid="uid://d3mxciul6ul2b" path="res://Assets/Characters/3.png" id="3_5hylm"]
+[ext_resource type="Texture2D" uid="uid://bh2ho5e413i3y" path="res://Assets/Characters/4.png" id="4_iwf5w"]
+[ext_resource type="Texture2D" uid="uid://bmjaxg814s3cu" path="res://Assets/Characters/5.png" id="5_xqcil"]
+[ext_resource type="Texture2D" uid="uid://dl6m67k7ju4sp" path="res://Assets/Characters/6.png" id="6_slito"]
+[ext_resource type="Texture2D" uid="uid://ce4jl46foyu66" path="res://Assets/Characters/7.png" id="7_wsl7t"]
+[ext_resource type="Texture2D" uid="uid://ih16w35l0w7x" path="res://Assets/Characters/8.png" id="8_q0q2v"]
+
+[node name="PickWhoToPlayWith" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_right = 90.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = 76.0
+offset_right = 4442.0
+offset_bottom = 2599.0
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 40
+columns = 5
+
+[node name="Copycat" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/Copycat"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.25098, 0.537255, 0.866667, 1)
+theme_override_font_sizes/font_size = 100
+text = "Copycat
+"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/Copycat"]
+layout_mode = 2
+texture = ExtResource("1_kpw1p")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/Copycat"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.25098, 0.537255, 0.866667, 1)
+theme_override_font_sizes/font_size = 50
+text = "Hello! I start with Cooperate, and afterwards, I just copy whatever you did in the last round. Meow"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="AlwaysCheat" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/AlwaysCheat"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.321569, 0.32549, 0.498039, 1)
+theme_override_font_sizes/font_size = 100
+text = "Always Cheat"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/AlwaysCheat"]
+layout_mode = 2
+texture = ExtResource("2_f5l2t")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/AlwaysCheat"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.321569, 0.32549, 0.498039, 1)
+theme_override_font_sizes/font_size = 50
+text = "the strong shall eat the weak
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="AlwaysCooperate" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/AlwaysCooperate"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.458824, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "Always Cooperate"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/AlwaysCooperate"]
+layout_mode = 2
+texture = ExtResource("3_5hylm")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/AlwaysCooperate"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.458824, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Let's be best friends! <3"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="Grudger" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/Grudger"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.839216, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Grudger"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/Grudger"]
+layout_mode = 2
+texture = ExtResource("4_iwf5w")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/Grudger"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.952941, 0.803922, 0.00392157, 1)
+theme_override_font_sizes/font_size = 50
+text = "Listen, pardner. I'll start cooperatin', and keep cooperatin', but if y'all ever cheat me, I'LL CHEAT YOU BACK 'TIL THE END OF TARNATION."
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="Detective" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/Detective"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.909804, 0.682353, 0.341176, 1)
+theme_override_font_sizes/font_size = 100
+text = "Detective"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/Detective"]
+layout_mode = 2
+texture = ExtResource("5_xqcil")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/Detective"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.909804, 0.682353, 0.341176, 1)
+theme_override_font_sizes/font_size = 50
+text = "First: I analyze you. I start: Cooperate, Cheat, Cooperate, Cooperate. If you cheat back, I'll act like Copycat. If you never cheat back, I'll act like Always Cheat, to exploit you. Elementary, my dear Watson."
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="Copykitten" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/Copykitten"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.533333, 0.658824, 0.807843, 1)
+theme_override_font_sizes/font_size = 100
+text = "Copykitten
+"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/Copykitten"]
+layout_mode = 2
+texture = ExtResource("6_slito")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/Copykitten"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.533333, 0.658824, 0.807843, 1)
+theme_override_font_sizes/font_size = 50
+text = "Hello! I'm like Copycat, except I Cheat back only after you Cheat me twice in a row. After all, the first one could be a mistake! Purrrrr"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="Simpleton" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/Simpleton"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.52549, 0.768627, 0.282353, 1)
+theme_override_font_sizes/font_size = 100
+text = "Simpleton"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/Simpleton"]
+layout_mode = 2
+texture = ExtResource("7_wsl7t")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/Simpleton"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.52549, 0.768627, 0.282353, 1)
+theme_override_font_sizes/font_size = 50
+text = "hi i try start cooperate. if you cooperate back, i do same thing as last move, even if it mistake. if you cheat back, i do opposite thing as last move, even if it mistake."
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="Random" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/Random"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.368627, 0.368627, 1)
+theme_override_font_sizes/font_size = 100
+text = "Copycat
+"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/Random"]
+layout_mode = 2
+texture = ExtResource("8_q0q2v")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/Random"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.368627, 0.368627, 1)
+theme_override_font_sizes/font_size = 50
+text = "Monkey robot! Ninja pizza tacos! lol i'm so random
+(Just plays Cheat or Cooperate randomly with a 50/50 chance)
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="Copycat9" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/Copycat9"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Temp"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/Copycat9"]
+layout_mode = 2
+texture = ExtResource("1_kpw1p")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/Copycat9"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "temp"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="Copycat10" type="VBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/GridContainer/Copycat10"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Temp"
+
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/Copycat10"]
+layout_mode = 2
+texture = ExtResource("1_kpw1p")
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="Control/GridContainer/Copycat10"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Temp"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_group_ = true
+
+[node name="Title" type="Label" parent="."]
+offset_left = 174.0
+offset_right = 994.0
+offset_bottom = 83.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Choose who to interact with"
+horizontal_alignment = 1
+vertical_alignment = 1
