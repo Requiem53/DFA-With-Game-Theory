@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://4dxdjsmqos28"]
+[gd_scene load_steps=10 format=3 uid="uid://4dxdjsmqos28"]
 
 [ext_resource type="Texture2D" uid="uid://d0sx5h7kiphqa" path="res://Assets/Characters/1.png" id="1_kpw1p"]
+[ext_resource type="Script" path="res://Scripts/TransitionTo1v1.gd" id="1_unx5q"]
 [ext_resource type="Texture2D" uid="uid://cjokkvowvfpol" path="res://Assets/Characters/2.png" id="2_f5l2t"]
 [ext_resource type="Texture2D" uid="uid://d3mxciul6ul2b" path="res://Assets/Characters/3.png" id="3_5hylm"]
 [ext_resource type="Texture2D" uid="uid://bh2ho5e413i3y" path="res://Assets/Characters/4.png" id="4_iwf5w"]
@@ -32,9 +33,11 @@ scale = Vector2(0.25, 0.25)
 theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 40
 columns = 5
+script = ExtResource("1_unx5q")
 
 [node name="Copycat" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/Copycat"]
@@ -64,6 +67,7 @@ metadata/_edit_group_ = true
 
 [node name="AlwaysCheat" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/AlwaysCheat"]
@@ -93,6 +97,7 @@ metadata/_edit_group_ = true
 
 [node name="AlwaysCooperate" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/AlwaysCooperate"]
@@ -120,6 +125,7 @@ metadata/_edit_group_ = true
 
 [node name="Grudger" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/Grudger"]
@@ -147,6 +153,7 @@ metadata/_edit_group_ = true
 
 [node name="Detective" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/Detective"]
@@ -174,6 +181,7 @@ metadata/_edit_group_ = true
 
 [node name="Copykitten" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/Copykitten"]
@@ -202,6 +210,7 @@ metadata/_edit_group_ = true
 
 [node name="Simpleton" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/Simpleton"]
@@ -229,6 +238,7 @@ metadata/_edit_group_ = true
 
 [node name="Random" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/Random"]
@@ -236,8 +246,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.368627, 0.368627, 1)
 theme_override_font_sizes/font_size = 100
-text = "Copycat
-"
+text = "Random"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/Random"]
 layout_mode = 2
@@ -259,6 +268,7 @@ metadata/_edit_group_ = true
 
 [node name="Copycat9" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/Copycat9"]
@@ -286,6 +296,7 @@ metadata/_edit_group_ = true
 
 [node name="Copycat10" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Control/GridContainer/Copycat10"]

@@ -17,13 +17,16 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 
 [dotnet]
 
 project/assembly_name="Game Theory with DFA"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-vim/plugin.cfg")
 
 [rendering]
 
