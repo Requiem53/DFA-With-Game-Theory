@@ -1,0 +1,256 @@
+[gd_scene load_steps=4 format=3 uid="uid://brnw8qihdicxk"]
+
+[ext_resource type="Texture2D" uid="uid://dyo3frmr7vmv6" path="res://Assets/Characters/11.png" id="1_y5lpb"]
+[ext_resource type="Texture2D" uid="uid://bdsa687fdsudc" path="res://Assets/Characters/Simpleton_CHCH.png" id="2_vhmvq"]
+[ext_resource type="Texture2D" uid="uid://dg2yw3p5fhn8j" path="res://Assets/Characters/Detective_CH7-CP7CH7.png" id="3_86be2"]
+
+[node name="1v1Screen" type="Node2D"]
+
+[node name="Header" type="Node2D" parent="."]
+position = Vector2(23, 28)
+
+[node name="BackControl" type="Control" parent="Header"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 25.0
+offset_bottom = 30.0
+
+[node name="Label" type="Label" parent="Header/BackControl"]
+offset_left = -15.0
+offset_top = -20.0
+offset_right = 53.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0.219608, 0.345098, 0.815686, 1)
+theme_override_font_sizes/font_size = 20
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreControl" type="Control" parent="Header"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -88.0
+offset_right = 40.0
+offset_bottom = -48.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Header/ScoreControl"]
+layout_mode = 2
+offset_top = 101.0
+offset_right = 1111.0
+offset_bottom = 211.0
+
+[node name="HeaderContainer" type="VBoxContainer" parent="Header/ScoreControl/ScrollContainer"]
+layout_mode = 2
+
+[node name="FirstPlayerContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer"]
+layout_mode = 2
+
+[node name="NameContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer"]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/NameContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Always Cooperate: 100"
+
+[node name="ActionsContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer"]
+layout_direction = 2
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/ActionsContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/ActionsContainer/CenterContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Cheat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SecondPlayerContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer"]
+layout_mode = 2
+
+[node name="NameContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer"]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/NameContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Detective: 100"
+
+[node name="ActionsContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer"]
+layout_direction = 2
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/ActionsContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/ActionsContainer/CenterContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Cheat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TalliedScoreContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer"]
+layout_mode = 2
+
+[node name="NameContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/TalliedScoreContainer"]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/TalliedScoreContainer/NameContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Detective: 100"
+
+[node name="ActionsContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/TalliedScoreContainer"]
+layout_direction = 2
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/TalliedScoreContainer/ActionsContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/TalliedScoreContainer/ActionsContainer/CenterContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "+3/+0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MiddleScreen" type="Node2D" parent="."]
+position = Vector2(48, 173)
+
+[node name="GridContainer" type="GridContainer" parent="MiddleScreen"]
+offset_left = 263.0
+offset_right = 763.0
+offset_bottom = 104.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="MiddleScreen/GridContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MiddleScreen/GridContainer/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="CenterContainer2" type="CenterContainer" parent="MiddleScreen/GridContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="YCoop" type="Label" parent="MiddleScreen/GridContainer/CenterContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "You Cooperate"
+
+[node name="CenterContainer3" type="CenterContainer" parent="MiddleScreen/GridContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="YCheat" type="Label" parent="MiddleScreen/GridContainer/CenterContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "You Cheat"
+
+[node name="CenterContainer4" type="CenterContainer" parent="MiddleScreen/GridContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="TCooperate" type="Label" parent="MiddleScreen/GridContainer/CenterContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "They Cooperate"
+
+[node name="CenterContainer5" type="CenterContainer" parent="MiddleScreen/GridContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="CooperateCooperate" type="Label" parent="MiddleScreen/GridContainer/CenterContainer5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "+2 / +2"
+
+[node name="CenterContainer6" type="CenterContainer" parent="MiddleScreen/GridContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="CheatCooperate" type="Label" parent="MiddleScreen/GridContainer/CenterContainer6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "+3 / -1"
+
+[node name="CenterContainer7" type="CenterContainer" parent="MiddleScreen/GridContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="TCheat" type="Label" parent="MiddleScreen/GridContainer/CenterContainer7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "They Cheat"
+
+[node name="CenterContainer8" type="CenterContainer" parent="MiddleScreen/GridContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="CooperateCheat" type="Label" parent="MiddleScreen/GridContainer/CenterContainer8"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "-1 / +3"
+
+[node name="CenterContainer9" type="CenterContainer" parent="MiddleScreen/GridContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="CheatCheat" type="Label" parent="MiddleScreen/GridContainer/CenterContainer9"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "0 / 0"
+
+[node name="Player1" type="Sprite2D" parent="MiddleScreen"]
+position = Vector2(155, 38)
+scale = Vector2(0.3875, 0.3875)
+texture = ExtResource("1_y5lpb")
+
+[node name="Player2" type="Sprite2D" parent="MiddleScreen"]
+position = Vector2(883, 38)
+scale = Vector2(0.3875, 0.3875)
+texture = ExtResource("1_y5lpb")
+flip_h = true
+
+[node name="DFA Screen" type="Node2D" parent="."]
+position = Vector2(63, 228)
+
+[node name="Sprite2D" type="Sprite2D" parent="DFA Screen"]
+position = Vector2(179, 237)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_vhmvq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="DFA Screen"]
+position = Vector2(748, 226)
+scale = Vector2(0.358324, 0.358324)
+texture = ExtResource("3_86be2")

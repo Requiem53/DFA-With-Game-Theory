@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://4dxdjsmqos28"]
 
-[ext_resource type="Texture2D" uid="uid://d0sx5h7kiphqa" path="res://Assets/Characters/1.png" id="1_kpw1p"]
-[ext_resource type="Script" path="res://Scripts/TransitionTo1v1.gd" id="1_unx5q"]
-[ext_resource type="Texture2D" uid="uid://cjokkvowvfpol" path="res://Assets/Characters/2.png" id="2_f5l2t"]
-[ext_resource type="Texture2D" uid="uid://d3mxciul6ul2b" path="res://Assets/Characters/3.png" id="3_5hylm"]
-[ext_resource type="Texture2D" uid="uid://bh2ho5e413i3y" path="res://Assets/Characters/4.png" id="4_iwf5w"]
-[ext_resource type="Texture2D" uid="uid://bmjaxg814s3cu" path="res://Assets/Characters/5.png" id="5_xqcil"]
-[ext_resource type="Texture2D" uid="uid://dl6m67k7ju4sp" path="res://Assets/Characters/6.png" id="6_slito"]
-[ext_resource type="Texture2D" uid="uid://ce4jl46foyu66" path="res://Assets/Characters/7.png" id="7_wsl7t"]
-[ext_resource type="Texture2D" uid="uid://ih16w35l0w7x" path="res://Assets/Characters/8.png" id="8_q0q2v"]
+[ext_resource type="Script" path="res://Scripts/TransitionTo1v1.gd" id="1_8njxw"]
+[ext_resource type="Texture2D" uid="uid://d0sx5h7kiphqa" path="res://Assets/Characters/1.png" id="2_7ev3u"]
+[ext_resource type="Texture2D" uid="uid://cjokkvowvfpol" path="res://Assets/Characters/2.png" id="3_31wtj"]
+[ext_resource type="Texture2D" uid="uid://d3mxciul6ul2b" path="res://Assets/Characters/3.png" id="4_jn5b5"]
+[ext_resource type="Texture2D" uid="uid://bh2ho5e413i3y" path="res://Assets/Characters/4.png" id="5_0emss"]
+[ext_resource type="Texture2D" uid="uid://bmjaxg814s3cu" path="res://Assets/Characters/5.png" id="6_uegpk"]
+[ext_resource type="Texture2D" uid="uid://dl6m67k7ju4sp" path="res://Assets/Characters/6.png" id="7_milus"]
+[ext_resource type="Texture2D" uid="uid://ce4jl46foyu66" path="res://Assets/Characters/7.png" id="8_grxef"]
+[ext_resource type="Texture2D" uid="uid://ih16w35l0w7x" path="res://Assets/Characters/8.png" id="9_wp2j1"]
 
 [node name="PickWhoToPlayWith" type="Node2D"]
 
@@ -33,7 +33,7 @@ scale = Vector2(0.25, 0.25)
 theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 40
 columns = 5
-script = ExtResource("1_unx5q")
+script = ExtResource("1_8njxw")
 
 [node name="Copycat" type="VBoxContainer" parent="Control/GridContainer"]
 layout_mode = 2
@@ -50,7 +50,7 @@ text = "Copycat
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/Copycat"]
 layout_mode = 2
-texture = ExtResource("1_kpw1p")
+texture = ExtResource("2_7ev3u")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/Copycat"]
@@ -79,7 +79,7 @@ text = "Always Cheat"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/AlwaysCheat"]
 layout_mode = 2
-texture = ExtResource("2_f5l2t")
+texture = ExtResource("3_31wtj")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/AlwaysCheat"]
@@ -109,7 +109,7 @@ text = "Always Cooperate"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/AlwaysCooperate"]
 layout_mode = 2
-texture = ExtResource("3_5hylm")
+texture = ExtResource("4_jn5b5")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/AlwaysCooperate"]
@@ -137,7 +137,7 @@ text = "Grudger"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/Grudger"]
 layout_mode = 2
-texture = ExtResource("4_iwf5w")
+texture = ExtResource("5_0emss")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/Grudger"]
@@ -165,7 +165,7 @@ text = "Detective"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/Detective"]
 layout_mode = 2
-texture = ExtResource("5_xqcil")
+texture = ExtResource("6_uegpk")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/Detective"]
@@ -194,7 +194,7 @@ text = "Copykitten
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/Copykitten"]
 layout_mode = 2
-texture = ExtResource("6_slito")
+texture = ExtResource("7_milus")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/Copykitten"]
@@ -222,7 +222,7 @@ text = "Simpleton"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/Simpleton"]
 layout_mode = 2
-texture = ExtResource("7_wsl7t")
+texture = ExtResource("8_grxef")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/Simpleton"]
@@ -250,7 +250,7 @@ text = "Random"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/Random"]
 layout_mode = 2
-texture = ExtResource("8_q0q2v")
+texture = ExtResource("9_wp2j1")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/Random"]
@@ -280,7 +280,7 @@ text = "Temp"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/Copycat9"]
 layout_mode = 2
-texture = ExtResource("1_kpw1p")
+texture = ExtResource("2_7ev3u")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/Copycat9"]
@@ -308,7 +308,7 @@ text = "Temp"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/Copycat10"]
 layout_mode = 2
-texture = ExtResource("1_kpw1p")
+texture = ExtResource("2_7ev3u")
 stretch_mode = 3
 
 [node name="Description" type="Label" parent="Control/GridContainer/Copycat10"]
