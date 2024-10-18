@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0sx5h7kiphqa"
-path="res://.godot/imported/1.png-4e011c1c6ee8f20cb335f9c1d41745be.ctex"
+uid="uid://dl6m67k7ju4sp"
+path="res://.godot/imported/Copykitten.png-fc86bc92579f00df20fcd31a62082891.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/1.png"
-dest_files=["res://.godot/imported/1.png-4e011c1c6ee8f20cb335f9c1d41745be.ctex"]
+source_file="res://Assets/Characters/Copykitten.png"
+dest_files=["res://.godot/imported/Copykitten.png-fc86bc92579f00df20fcd31a62082891.ctex"]
 
 [params]
 

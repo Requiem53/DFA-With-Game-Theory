@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ih16w35l0w7x"
-path="res://.godot/imported/8.png-5a8b7e0678c45e60913c611a6e4c2501.ctex"
+uid="uid://bh2ho5e413i3y"
+path="res://.godot/imported/Grudger.png-2439014a63c1e792d34f22dbcd5e931a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/8.png"
-dest_files=["res://.godot/imported/8.png-5a8b7e0678c45e60913c611a6e4c2501.ctex"]
+source_file="res://Assets/Characters/Grudger.png"
+dest_files=["res://.godot/imported/Grudger.png-2439014a63c1e792d34f22dbcd5e931a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh2ho5e413i3y"
-path="res://.godot/imported/4.png-cef9d23ae2ba643f743453c6c3187097.ctex"
+uid="uid://cjokkvowvfpol"
+path="res://.godot/imported/AlwaysCheats.png-6ff1c2413b9855677ec4e7f2939a8224.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/4.png"
-dest_files=["res://.godot/imported/4.png-cef9d23ae2ba643f743453c6c3187097.ctex"]
+source_file="res://Assets/Characters/AlwaysCheats.png"
+dest_files=["res://.godot/imported/AlwaysCheats.png-6ff1c2413b9855677ec4e7f2939a8224.ctex"]
 
 [params]
 

@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://4dxdjsmqos28"]
 
 [ext_resource type="Script" path="res://Scripts/TransitionTo1v1.gd" id="1_8njxw"]
-[ext_resource type="Texture2D" uid="uid://d0sx5h7kiphqa" path="res://Assets/Characters/1.png" id="2_7ev3u"]
-[ext_resource type="Texture2D" uid="uid://cjokkvowvfpol" path="res://Assets/Characters/2.png" id="3_31wtj"]
-[ext_resource type="Texture2D" uid="uid://d3mxciul6ul2b" path="res://Assets/Characters/3.png" id="4_jn5b5"]
-[ext_resource type="Texture2D" uid="uid://bh2ho5e413i3y" path="res://Assets/Characters/4.png" id="5_0emss"]
-[ext_resource type="Texture2D" uid="uid://bmjaxg814s3cu" path="res://Assets/Characters/5.png" id="6_uegpk"]
-[ext_resource type="Texture2D" uid="uid://dl6m67k7ju4sp" path="res://Assets/Characters/6.png" id="7_milus"]
-[ext_resource type="Texture2D" uid="uid://ce4jl46foyu66" path="res://Assets/Characters/7.png" id="8_grxef"]
-[ext_resource type="Texture2D" uid="uid://ih16w35l0w7x" path="res://Assets/Characters/8.png" id="9_wp2j1"]
+[ext_resource type="Texture2D" uid="uid://d0sx5h7kiphqa" path="res://Assets/Characters/Copycat.png" id="2_7ev3u"]
+[ext_resource type="Texture2D" uid="uid://cjokkvowvfpol" path="res://Assets/Characters/AlwaysCheats.png" id="3_31wtj"]
+[ext_resource type="Texture2D" uid="uid://d3mxciul6ul2b" path="res://Assets/Characters/AlwaysCooperates.png" id="4_jn5b5"]
+[ext_resource type="Texture2D" uid="uid://bh2ho5e413i3y" path="res://Assets/Characters/Grudger.png" id="5_0emss"]
+[ext_resource type="Texture2D" uid="uid://bmjaxg814s3cu" path="res://Assets/Characters/Detective.png" id="6_uegpk"]
+[ext_resource type="Texture2D" uid="uid://dl6m67k7ju4sp" path="res://Assets/Characters/Copykitten.png" id="7_milus"]
+[ext_resource type="Texture2D" uid="uid://ce4jl46foyu66" path="res://Assets/Characters/Simpleton.png" id="8_grxef"]
+[ext_resource type="Texture2D" uid="uid://ih16w35l0w7x" path="res://Assets/Characters/Random.png" id="9_wp2j1"]
 
 [node name="PickWhoToPlayWith" type="Node2D"]
 
@@ -26,11 +26,11 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = -24.0
 offset_top = 76.0
-offset_right = 4442.0
-offset_bottom = 2599.0
+offset_right = 4411.0
+offset_bottom = 2200.0
 grow_vertical = 2
 scale = Vector2(0.25, 0.25)
-theme_override_constants/h_separation = 100
+theme_override_constants/h_separation = 80
 theme_override_constants/v_separation = 40
 columns = 5
 script = ExtResource("1_8njxw")
@@ -75,7 +75,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.321569, 0.32549, 0.498039, 1)
 theme_override_font_sizes/font_size = 100
-text = "Always Cheat"
+text = "Always Cheats"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/AlwaysCheat"]
 layout_mode = 2
@@ -105,7 +105,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.458824, 1, 1)
 theme_override_font_sizes/font_size = 100
-text = "Always Cooperate"
+text = "Always Cooperates"
 
 [node name="Picture" type="TextureRect" parent="Control/GridContainer/AlwaysCooperate"]
 layout_mode = 2
