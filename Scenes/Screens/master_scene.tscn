@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgtul6gtl1oqe"]
+
+[ext_resource type="Script" path="res://Scripts/SceneManager.gd" id="1_mauc5"]
+[ext_resource type="Script" path="res://Scripts/GlobalVars.gd" id="2_8s32l"]
+[ext_resource type="PackedScene" uid="uid://4dxdjsmqos28" path="res://Scenes/Screens/PickWhoToPlayWith.tscn" id="2_prc07"]
+
+[node name="MasterScene" type="Node2D"]
+script = ExtResource("1_mauc5")
+
+[node name="GlobalVars" type="Node" parent="."]
+script = ExtResource("2_8s32l")
+
+[node name="PickWhoToPlayWith" parent="." instance=ExtResource("2_prc07")]

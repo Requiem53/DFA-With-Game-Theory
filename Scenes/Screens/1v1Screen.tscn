@@ -1,22 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://brnw8qihdicxk"]
+[gd_scene load_steps=9 format=3 uid="uid://brnw8qihdicxk"]
 
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_23svv"]
-[ext_resource type="Texture2D" uid="uid://dyo3frmr7vmv6" path="res://Assets/Characters/11.png" id="1_y5lpb"]
+[ext_resource type="PackedScene" uid="uid://cje64cvf26ix5" path="res://Scenes/Screens/DecisionNode.tscn" id="2_4cos6"]
 [ext_resource type="Texture2D" uid="uid://bdsa687fdsudc" path="res://Assets/Characters/Simpleton_CHCH.png" id="2_vhmvq"]
-[ext_resource type="Texture2D" uid="uid://dg2yw3p5fhn8j" path="res://Assets/Characters/Detective_CH7-CP7CH7.png" id="3_86be2"]
+[ext_resource type="Texture2D" uid="uid://dyo3frmr7vmv6" path="res://Assets/Characters/You.png" id="3_2it5m"]
+[ext_resource type="Texture2D" uid="uid://ca36nhfqauliy" path="res://Assets/DFA_GameTheory/Simpleton/Simpleton_CHCH.png" id="4_8or6x"]
 
-[node name="1v1Screen" type="Node2D" node_paths=PackedStringArray("player1LeaderboardLabel", "player2LeaderboardLabel", "player1ScoreLabel", "player2ScoreLabel", "player1GameName", "player2GameName", "player1Sprite", "player2Sprite")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gin0m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2r5ci"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uun0t"]
+
+[node name="1v1Screen" type="Node2D" node_paths=PackedStringArray("player1LeaderboardLabel", "player2LeaderboardLabel", "player1ScoreLabel", "player2ScoreLabel", "player1GameName", "player2GameName", "player1Sprite", "player2Sprite", "player1DFA", "player2DFA", "userControls")]
 script = ExtResource("1_23svv")
 player1Name = "Copycat"
 player2Name = "AlwaysCheats"
-player1LeaderboardLabel = NodePath("Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/NameContainer/Player1Name")
-player2LeaderboardLabel = NodePath("Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/NameContainer/Player2Name")
-player1ScoreLabel = NodePath("Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/NameContainer2/Player1Score")
-player2ScoreLabel = NodePath("Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/NameContainer2/Player2Score")
+player1LeaderboardLabel = NodePath("Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/P1NameContainer/Player1Name")
+player2LeaderboardLabel = NodePath("Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/P2NameContainer/Player2Name")
+player1ScoreLabel = NodePath("Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/P1ScoreContainer/Player1Score")
+player2ScoreLabel = NodePath("Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/P2ScoreContainer/Player2Score")
 player1GameName = NodePath("MiddleScreen/VBoxContainer/Player1Name")
 player2GameName = NodePath("MiddleScreen/VBoxContainer2/Player2Name")
 player1Sprite = NodePath("MiddleScreen/VBoxContainer/Player1Sprite")
 player2Sprite = NodePath("MiddleScreen/VBoxContainer2/Player2Sprite")
+player1DFA = NodePath("DFA Screen/HBoxContainer/MarginContainer2/Player1DFA")
+player2DFA = NodePath("DFA Screen/HBoxContainer/MarginContainer/Player2DFA")
+userControls = NodePath("Header/UserControls")
 
 [node name="Header" type="Node2D" parent="."]
 position = Vector2(23, 28)
@@ -60,35 +70,36 @@ layout_mode = 2
 [node name="FirstPlayerContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer"]
 layout_mode = 2
 
-[node name="NameContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer"]
+[node name="P1NameContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer"]
 custom_minimum_size = Vector2(190, 0)
 layout_mode = 2
 
-[node name="Player1Name" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/NameContainer"]
+[node name="Player1Name" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/P1NameContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Always Cooperate:"
 
-[node name="NameContainer2" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer"]
+[node name="P1ScoreContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
-[node name="Player1Score" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/NameContainer2"]
+[node name="Player1Score" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/P1ScoreContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "100"
 
-[node name="ActionsContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer"]
+[node name="P1ActionsContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer"]
 layout_direction = 2
 layout_mode = 2
 
-[node name="Player1Decision" type="CenterContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/ActionsContainer"]
+[node name="Player1Decision" type="CenterContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/P1ActionsContainer"]
+visible = false
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 
-[node name="Decision" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/ActionsContainer/Player1Decision"]
+[node name="Decision" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/FirstPlayerContainer/P1ActionsContainer/Player1Decision"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
@@ -99,59 +110,51 @@ vertical_alignment = 1
 [node name="SecondPlayerContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer"]
 layout_mode = 2
 
-[node name="NameContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer"]
+[node name="P2NameContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer"]
 custom_minimum_size = Vector2(190, 0)
 layout_mode = 2
 
-[node name="Player2Name" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/NameContainer"]
+[node name="Player2Name" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/P2NameContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Detective:"
 
-[node name="NameContainer2" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer"]
+[node name="P2ScoreContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
-[node name="Player2Score" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/NameContainer2"]
+[node name="Player2Score" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/P2ScoreContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "50"
 
-[node name="ActionsContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer"]
+[node name="P2ActionsContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer"]
 layout_direction = 2
 layout_mode = 2
 
-[node name="Player2Decision" type="CenterContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/ActionsContainer"]
-custom_minimum_size = Vector2(120, 0)
+[node name="Player2Decision" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/P2ActionsContainer" instance=ExtResource("2_4cos6")]
+visible = false
 layout_mode = 2
-
-[node name="Decision" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/SecondPlayerContainer/ActionsContainer/Player2Decision"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Cheat"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Voltres" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer"]
 layout_mode = 2
 
-[node name="NameContainer" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres"]
+[node name="EMPTY" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres"]
 custom_minimum_size = Vector2(190, 0)
 layout_mode = 2
 
-[node name="Player2Name" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres/NameContainer"]
+[node name="Player2Name" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres/EMPTY"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 
-[node name="NameContainer2" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres"]
+[node name="EMPTY2" type="HBoxContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
-[node name="Player2Score" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres/NameContainer2"]
+[node name="Player2Score" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres/EMPTY2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
@@ -160,17 +163,55 @@ theme_override_font_sizes/font_size = 20
 layout_direction = 2
 layout_mode = 2
 
-[node name="Player2Decision" type="CenterContainer" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres/ActionsContainer"]
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
+[node name="UserControls" type="Control" parent="Header"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -15.0
+offset_top = 145.0
+offset_right = 25.0
+offset_bottom = 185.0
 
-[node name="Decision" type="Label" parent="Header/ScoreControl/ScrollContainer/HeaderContainer/Voltres/ActionsContainer/Player2Decision"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Header/UserControls"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 25
+
+[node name="Cooperate" type="Button" parent="Header/UserControls/VBoxContainer"]
+z_index = 5
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "+3/-1"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_colors/font_color = Color(0.309804, 0.831373, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.309804, 0.831373, 0, 1)
+theme_override_colors/font_hover_color = Color(0.180392, 0.411765, 0.188235, 1)
+theme_override_colors/font_focus_color = Color(0.309804, 0.831373, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.309804, 0.831373, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.309804, 0.831373, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gin0m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gin0m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gin0m")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2r5ci")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uun0t")
+text = "Cooperate"
+metadata/_edit_use_anchors_ = true
+
+[node name="Cheat" type="Button" parent="Header/UserControls/VBoxContainer"]
+z_index = 5
+layout_mode = 2
+theme_override_colors/font_color = Color(0.972549, 0.258824, 0.47451, 1)
+theme_override_colors/font_pressed_color = Color(0.972549, 0.258824, 0.47451, 1)
+theme_override_colors/font_hover_color = Color(0.482353, 0, 0.176471, 1)
+theme_override_colors/font_focus_color = Color(0.972549, 0.258824, 0.47451, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.972549, 0.258824, 0.47451, 1)
+theme_override_colors/font_disabled_color = Color(0.972549, 0.258824, 0.47451, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gin0m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gin0m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gin0m")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2r5ci")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uun0t")
+text = "Cheat"
+metadata/_edit_use_anchors_ = true
 
 [node name="MiddleScreen" type="Node2D" parent="."]
 position = Vector2(48, 173)
@@ -289,7 +330,7 @@ vertical_alignment = 1
 
 [node name="Player1Sprite" type="TextureRect" parent="MiddleScreen/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_y5lpb")
+texture = ExtResource("3_2it5m")
 stretch_mode = 3
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MiddleScreen"]
@@ -309,7 +350,7 @@ vertical_alignment = 1
 
 [node name="Player2Sprite" type="TextureRect" parent="MiddleScreen/VBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("1_y5lpb")
+texture = ExtResource("3_2it5m")
 stretch_mode = 3
 flip_h = true
 
@@ -323,10 +364,10 @@ offset_bottom = 877.0
 scale = Vector2(0.29, 0.29)
 
 [node name="MarginContainer2" type="MarginContainer" parent="DFA Screen/HBoxContainer"]
-custom_minimum_size = Vector2(2000, 0)
+custom_minimum_size = Vector2(1950, 0)
 layout_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="DFA Screen/HBoxContainer/MarginContainer2"]
+[node name="Player1DFA" type="TextureRect" parent="DFA Screen/HBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(576, 0)
 layout_mode = 2
 texture = ExtResource("2_vhmvq")
@@ -334,11 +375,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="DFA Screen/HBoxContainer"]
-custom_minimum_size = Vector2(2000, 0)
+custom_minimum_size = Vector2(1950, 0)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="DFA Screen/HBoxContainer/MarginContainer"]
+[node name="Player2DFA" type="TextureRect" parent="DFA Screen/HBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(576, 0)
 layout_mode = 2
-texture = ExtResource("3_86be2")
+texture = ExtResource("4_8or6x")
 stretch_mode = 5

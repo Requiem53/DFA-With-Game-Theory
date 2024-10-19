@@ -1,22 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://4dxdjsmqos28"]
+[gd_scene load_steps=13 format=3 uid="uid://4dxdjsmqos28"]
 
-[ext_resource type="Script" path="res://Scripts/TransitionTo1v1.gd" id="1_8njxw"]
-[ext_resource type="Script" path="res://Scripts/SelectHandler.gd" id="1_fh8re"]
+[ext_resource type="Script" path="res://Scripts/SelectPlayers.gd" id="1_eudub"]
 [ext_resource type="Texture2D" uid="uid://d0sx5h7kiphqa" path="res://Assets/Characters/Copycat.png" id="2_7ev3u"]
 [ext_resource type="StyleBox" uid="uid://b3gkidwfwbbuo" path="res://Scenes/Screens/UnselectedBorder.tres" id="2_sercx"]
 [ext_resource type="Texture2D" uid="uid://cjokkvowvfpol" path="res://Assets/Characters/AlwaysCheats.png" id="3_31wtj"]
-[ext_resource type="Script" path="res://Scripts/PanelStyleTest.gd" id="3_uenrv"]
 [ext_resource type="Texture2D" uid="uid://d3mxciul6ul2b" path="res://Assets/Characters/AlwaysCooperates.png" id="4_jn5b5"]
 [ext_resource type="Texture2D" uid="uid://bh2ho5e413i3y" path="res://Assets/Characters/Grudger.png" id="5_0emss"]
 [ext_resource type="Texture2D" uid="uid://bmjaxg814s3cu" path="res://Assets/Characters/Detective.png" id="6_uegpk"]
 [ext_resource type="Texture2D" uid="uid://dl6m67k7ju4sp" path="res://Assets/Characters/Copykitten.png" id="7_milus"]
 [ext_resource type="Texture2D" uid="uid://ce4jl46foyu66" path="res://Assets/Characters/Simpleton.png" id="8_grxef"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0nhwy"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64tsm"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0q7xd"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ingd0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wdn2t"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_grrw4"]
 
 [node name="PickWhoToPlayWith" type="Node2D"]
 
@@ -27,11 +25,9 @@ offset_left = 50.0
 offset_right = 90.0
 offset_bottom = 40.0
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="SelectHandler" type="Node2D" parent="Control"]
-script = ExtResource("1_fh8re")
-
-[node name="GridContainer" type="GridContainer" parent="Control"]
+[node name="GridContainer" type="GridContainer" parent="Control" node_paths=PackedStringArray("transitionButton")]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -46,14 +42,14 @@ mouse_filter = 2
 theme_override_constants/h_separation = 60
 theme_override_constants/v_separation = 40
 columns = 5
-script = ExtResource("1_8njxw")
+script = ExtResource("1_eudub")
+transitionButton = NodePath("../../Swap")
 
 [node name="PanelContainer" type="PanelContainer" parent="Control/GridContainer"]
 layout_mode = 2
 mouse_filter = 2
 mouse_default_cursor_shape = 4
 theme_override_styles/panel = ExtResource("2_sercx")
-script = ExtResource("3_uenrv")
 
 [node name="Copycat" type="VBoxContainer" parent="Control/GridContainer/PanelContainer"]
 layout_mode = 2
@@ -90,24 +86,24 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = ExtResource("2_sercx")
 
-[node name="AlwaysCheat" type="VBoxContainer" parent="Control/GridContainer/PanelContainer2"]
+[node name="AlwaysCheats" type="VBoxContainer" parent="Control/GridContainer/PanelContainer2"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_constants/separation = 20
 
-[node name="Title" type="Label" parent="Control/GridContainer/PanelContainer2/AlwaysCheat"]
+[node name="Title" type="Label" parent="Control/GridContainer/PanelContainer2/AlwaysCheats"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.321569, 0.32549, 0.498039, 1)
 theme_override_font_sizes/font_size = 100
 text = "Always Cheats"
 
-[node name="Picture" type="TextureRect" parent="Control/GridContainer/PanelContainer2/AlwaysCheat"]
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/PanelContainer2/AlwaysCheats"]
 layout_mode = 2
 texture = ExtResource("3_31wtj")
 stretch_mode = 3
 
-[node name="Description" type="Label" parent="Control/GridContainer/PanelContainer2/AlwaysCheat"]
+[node name="Description" type="Label" parent="Control/GridContainer/PanelContainer2/AlwaysCheats"]
 custom_minimum_size = Vector2(800, 200)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -125,24 +121,24 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = ExtResource("2_sercx")
 
-[node name="AlwaysCooperate" type="VBoxContainer" parent="Control/GridContainer/PanelContainer3"]
+[node name="AlwaysCooperates" type="VBoxContainer" parent="Control/GridContainer/PanelContainer3"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_constants/separation = 20
 
-[node name="Title" type="Label" parent="Control/GridContainer/PanelContainer3/AlwaysCooperate"]
+[node name="Title" type="Label" parent="Control/GridContainer/PanelContainer3/AlwaysCooperates"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.458824, 1, 1)
 theme_override_font_sizes/font_size = 100
 text = "Always Cooperates"
 
-[node name="Picture" type="TextureRect" parent="Control/GridContainer/PanelContainer3/AlwaysCooperate"]
+[node name="Picture" type="TextureRect" parent="Control/GridContainer/PanelContainer3/AlwaysCooperates"]
 layout_mode = 2
 texture = ExtResource("4_jn5b5")
 stretch_mode = 3
 
-[node name="Description" type="Label" parent="Control/GridContainer/PanelContainer3/AlwaysCooperate"]
+[node name="Description" type="Label" parent="Control/GridContainer/PanelContainer3/AlwaysCooperates"]
 custom_minimum_size = Vector2(800, 200)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -353,27 +349,33 @@ autowrap_mode = 3
 metadata/_edit_group_ = true
 
 [node name="Title" type="Label" parent="."]
-offset_left = 174.0
-offset_right = 994.0
+offset_left = 90.0
+offset_right = 1023.0
 offset_bottom = 83.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
-text = "Choose two to have a game"
+text = "Choose one/two to have a game"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Swap" type="Button" parent="."]
 offset_left = 1043.0
 offset_top = 13.0
 offset_right = 1115.0
 offset_bottom = 76.0
 theme_override_colors/font_color = Color(0.227451, 0.45098, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.227451, 0.45098, 1, 1)
 theme_override_colors/font_hover_color = Color(0.0823529, 0.419608, 0.698039, 1)
+theme_override_colors/font_focus_color = Color(0.227451, 0.45098, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.227451, 0.45098, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.227451, 0.45098, 1, 1)
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxEmpty_0nhwy")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_0nhwy")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_0nhwy")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_0q7xd")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_wdn2t")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_64tsm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_64tsm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_64tsm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ingd0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_grrw4")
 text = "GO"
+metadata/_edit_use_anchors_ = true

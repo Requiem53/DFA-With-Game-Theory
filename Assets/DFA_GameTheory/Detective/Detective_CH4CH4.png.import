@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyo3frmr7vmv6"
-path="res://.godot/imported/11.png-65c52cb9f66e84028ca9eecbdb8cb13a.ctex"
+uid="uid://dcahu6dq4rfkg"
+path="res://.godot/imported/Detective_CH4CH4.png-6efb1aba36bd2a67b8294b2678641889.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/11.png"
-dest_files=["res://.godot/imported/11.png-65c52cb9f66e84028ca9eecbdb8cb13a.ctex"]
+source_file="res://Assets/DFA_GameTheory/Detective/Detective_CH4CH4.png"
+dest_files=["res://.godot/imported/Detective_CH4CH4.png-6efb1aba36bd2a67b8294b2678641889.ctex"]
 
 [params]
 
