@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://brnw8qihdicxk"]
+[gd_scene load_steps=15 format=3 uid="uid://brnw8qihdicxk"]
 
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_23svv"]
 [ext_resource type="PackedScene" uid="uid://cje64cvf26ix5" path="res://Scenes/Screens/DecisionNode.tscn" id="2_4cos6"]
+[ext_resource type="Script" path="res://Scripts/UserHandler.gd" id="2_ls1ie"]
 [ext_resource type="Script" path="res://Scripts/BackScript.gd" id="2_ols3l"]
+[ext_resource type="Script" path="res://Scripts/StepHandler.gd" id="2_t8igl"]
 [ext_resource type="Texture2D" uid="uid://bdsa687fdsudc" path="res://Assets/Characters/Simpleton_CHCH.png" id="2_vhmvq"]
 [ext_resource type="Texture2D" uid="uid://dyo3frmr7vmv6" path="res://Assets/Characters/You.png" id="3_2it5m"]
 [ext_resource type="Texture2D" uid="uid://ca36nhfqauliy" path="res://Assets/DFA_GameTheory/Simpleton/Simpleton_CHCH.png" id="4_8or6x"]
@@ -35,6 +37,14 @@ player1DFA = NodePath("DFA Screen/HBoxContainer/MarginContainer2/Player1DFA")
 player2DFA = NodePath("DFA Screen/HBoxContainer/MarginContainer/Player2DFA")
 userControls = NodePath("Header/UserControls")
 gameControls = NodePath("Header/GameControls")
+
+[node name="UserHandler" type="Node2D" parent="."]
+position = Vector2(0, -1)
+script = ExtResource("2_ls1ie")
+
+[node name="StepHandler" type="Node2D" parent="." node_paths=PackedStringArray("stepButton")]
+script = ExtResource("2_t8igl")
+stepButton = NodePath("../Header/GameControls/VBoxContainer/Step")
 
 [node name="Header" type="Node2D" parent="."]
 position = Vector2(23, 28)
