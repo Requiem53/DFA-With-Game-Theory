@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgtul6gtl1oqe"]
+[gd_scene load_steps=5 format=3 uid="uid://cgtul6gtl1oqe"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.gd" id="1_mauc5"]
 [ext_resource type="Script" path="res://Scripts/GlobalVars.gd" id="2_8s32l"]
 [ext_resource type="PackedScene" uid="uid://4dxdjsmqos28" path="res://Scenes/Screens/PickWhoToPlayWith.tscn" id="2_prc07"]
+[ext_resource type="PackedScene" uid="uid://brnw8qihdicxk" path="res://Scenes/Screens/1v1Screen.tscn" id="4_5h7ya"]
 
 [node name="MasterScene" type="Node2D"]
 script = ExtResource("1_mauc5")
@@ -11,3 +12,6 @@ script = ExtResource("1_mauc5")
 script = ExtResource("2_8s32l")
 
 [node name="PickWhoToPlayWith" parent="." instance=ExtResource("2_prc07")]
+
+[node name="1v1Screen" parent="." instance=ExtResource("4_5h7ya")]
+visible = false

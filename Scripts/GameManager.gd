@@ -19,6 +19,7 @@ extends Node2D
 @export var player2DFA: TextureRect
 
 @export var userControls: Control
+@export var gameControls: Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player1Name = GlobalVars.player1
@@ -48,3 +49,7 @@ func _ready():
 	
 	if !GlobalVars.hasUser:
 		userControls.hide()
+		gameControls.show()
+	else:
+		userControls.show()
+		gameControls.hide()

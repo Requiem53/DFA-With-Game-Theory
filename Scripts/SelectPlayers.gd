@@ -33,6 +33,7 @@ func changeSelected(node: VBoxContainer):
 		selected.remove_at(selected.find(node.name))
 		
 func assignPlayers():
+	print(selected)
 	GlobalVars.player1 = "None"
 	GlobalVars.player2 = "None"
 	if selected.size() == 1:
@@ -43,3 +44,4 @@ func assignPlayers():
 		GlobalVars.player1 = selected[0]
 		GlobalVars.player2 = selected[1]
 		GlobalVars.hasUser = false
+	selected.clear()
