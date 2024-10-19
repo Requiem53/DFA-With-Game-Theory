@@ -5,6 +5,8 @@ extends Node2D
 @onready var player1:NPCPlayer
 @onready var player2:NPCPlayer
 
+@export var decisionHandler: Node2D
+
 func _ready():
 	stepButton.pressed.connect(handleStep)
 	
@@ -17,7 +19,7 @@ func _ready():
 func handleStep():
 	#Both players make decision
 	decisionStep()
-	pass
+	decisionHandler.addDecisionToGUI(player1.chosenDecision(), player2.chosenDecision())
 
 func decisionStep():
 	player1.enemyDecision = player2.chosenDecision()

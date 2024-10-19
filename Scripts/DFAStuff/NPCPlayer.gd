@@ -42,6 +42,7 @@ func initializeStrat(strat: String):
 		SimpletonDecision()
 
 func cooperate():
+	decision = "Cooperate"
 	decisionToken = 0
 	decisionHistory.append(decision)
 
@@ -54,13 +55,16 @@ func chosenDecision():
 	return decisionToken
 
 func makeDecision():
+	#start condition
 	if !start:
 		currentState = decisionTable[currentState][enemyDecision]
+	start = false
 	if decisionDecider[currentState] == 0:
 		cooperate()
 	else:
 		cheat()
 	print(stratName+": ",decisionHistory)
+	#print(stratName+": ",currentState)
 
 func CopycatDecision():
 	decisionTable = [[0,1],[0,1]]

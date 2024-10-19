@@ -1,11 +1,25 @@
 extends Node2D
 
+@export var cooperateButton: Button
+@export var cheatButton: Button
 
-# Called when the node enters the scene tree for the first time.
+@export var decisionHandler: Node2D
+
+@onready var player2:NPCPlayer
 func _ready():
-	pass # Replace with function body.
+	cooperateButton.pressed.connect(cooperateDecision)
+	cheatButton.pressed.connect(cheatDecision)
+	#print(GlobalVars.player2)
+	player2 = NPCPlayer.new()
+	player2.initializeStrat(GlobalVars.player2)
+
+func cooperateDecision():
+	player2.makeDecision()
+	player2.enemyDecision = 0
+	decisionHandler.addDecisionToGUI(0, player2.chosenDecision())
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func cheatDecision():
+	player2.makeDecision()
+	player2.enemyDecision = 1
+	decisionHandler.addDecisionToGUI(1, player2.chosenDecision())
