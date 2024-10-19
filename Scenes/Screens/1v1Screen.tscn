@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bdsa687fdsudc" path="res://Assets/Characters/Simpleton_CHCH.png" id="2_vhmvq"]
 [ext_resource type="Texture2D" uid="uid://dg2yw3p5fhn8j" path="res://Assets/Characters/Detective_CH7-CP7CH7.png" id="3_86be2"]
 
-[node name="1v1Screen" type="Node2D" node_paths=PackedStringArray("player1LeaderboardLabel", "player2LeaderboardLabel", "player1ScoreLabel", "player2ScoreLabel", "player1GameName", "player2GameName", "player1Sprite", "player2Sprite", "player1DFA", "player2DFA")]
+[node name="1v1Screen" type="Node2D" node_paths=PackedStringArray("player1LeaderboardLabel", "player2LeaderboardLabel", "player1ScoreLabel", "player2ScoreLabel", "player1GameName", "player2GameName", "player1Sprite", "player2Sprite")]
 script = ExtResource("1_23svv")
 player1Name = "Copycat"
 player2Name = "AlwaysCheats"
@@ -17,8 +17,6 @@ player1GameName = NodePath("MiddleScreen/VBoxContainer/Player1Name")
 player2GameName = NodePath("MiddleScreen/VBoxContainer2/Player2Name")
 player1Sprite = NodePath("MiddleScreen/VBoxContainer/Player1Sprite")
 player2Sprite = NodePath("MiddleScreen/VBoxContainer2/Player2Sprite")
-player1DFA = NodePath("")
-player2DFA = NodePath("")
 
 [node name="Header" type="Node2D" parent="."]
 position = Vector2(23, 28)
