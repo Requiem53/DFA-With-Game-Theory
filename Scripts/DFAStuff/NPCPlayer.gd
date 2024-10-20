@@ -25,6 +25,7 @@ func readyVars():
 func initializeStrat(strat: String):
 	readyVars()
 	stratName = strat
+	dfaStatus.append(stratName)
 	if stratName == "Copycat":
 		CopycatDecision()
 	elif stratName == "AlwaysCooperates":

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmku8o1e5up1b"
-path="res://.godot/imported/Copycat_CHCP.png-18a061cc3d536e3d1143e2d94b23a7eb.ctex"
+uid="uid://sn0hq6uxjj7o"
+path="res://.godot/imported/CH.png-0c22372ef57d1131b0acc6c79a14ab92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DFA_GameTheory/Copycat/1/Copycat_CHCP.png"
-dest_files=["res://.godot/imported/Copycat_CHCP.png-18a061cc3d536e3d1143e2d94b23a7eb.ctex"]
+source_file="res://Assets/DFA_GameTheory/Copycat/1/CH.png"
+dest_files=["res://.godot/imported/CH.png-0c22372ef57d1131b0acc6c79a14ab92.ctex"]
 
 [params]
 

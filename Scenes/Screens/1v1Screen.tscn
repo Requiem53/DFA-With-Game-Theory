@@ -39,7 +39,7 @@ player2DFA = NodePath("DFA Screen/HBoxContainer/MarginContainer/Player2DFA")
 userControls = NodePath("Header/UserControls")
 gameControls = NodePath("Header/GameControls")
 
-[node name="DecisionsHandler" type="Node2D" parent="." node_paths=PackedStringArray("p1ActionsContainer", "p2ActionsContainer", "actionsContainer", "p1ScoreLabel", "p2ScoreLabel", "decisionNode", "scrollContainer", "CoopCoop", "CoopCheat", "CheatCoop", "CheatCheat")]
+[node name="DecisionsHandler" type="Node2D" parent="." node_paths=PackedStringArray("p1ActionsContainer", "p2ActionsContainer", "actionsContainer", "p1ScoreLabel", "p2ScoreLabel", "decisionNode", "scrollContainer", "p1DFA", "p2DFA", "CoopCoop", "CoopCheat", "CheatCoop", "CheatCheat")]
 script = ExtResource("2_ev6pu")
 p1ActionsContainer = NodePath("../Header/ScoreControl/HBoxContainer/ScrollContainer/HeaderContainer/P1ActionsContainer")
 p2ActionsContainer = NodePath("../Header/ScoreControl/HBoxContainer/ScrollContainer/HeaderContainer/P2ActionsContainer")
@@ -48,6 +48,8 @@ p1ScoreLabel = NodePath("../Header/ScoreControl/HBoxContainer/VBoxContainer/Firs
 p2ScoreLabel = NodePath("../Header/ScoreControl/HBoxContainer/VBoxContainer/SecondPlayerContainer/P2ScoreContainer/Player2Score")
 decisionNode = NodePath("../DecisionContainer")
 scrollContainer = NodePath("../Header/ScoreControl/HBoxContainer/ScrollContainer")
+p1DFA = NodePath("../DFA Screen/HBoxContainer/MarginContainer2/Player1DFA")
+p2DFA = NodePath("../DFA Screen/HBoxContainer/MarginContainer/Player2DFA")
 CoopCoop = NodePath("../MiddleScreen/GridContainer/CenterContainer5/CooperateCooperate")
 CoopCheat = NodePath("../MiddleScreen/GridContainer/CenterContainer8/CooperateCheat")
 CheatCoop = NodePath("../MiddleScreen/GridContainer/CenterContainer6/CheatCooperate")

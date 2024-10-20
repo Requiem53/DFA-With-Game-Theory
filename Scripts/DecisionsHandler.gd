@@ -10,6 +10,9 @@ extends Node2D
 @export var decisionNode: CenterContainer
 @export var scrollContainer: ScrollContainer
 
+@export var p1DFA: TextureRect
+@export var p2DFA: TextureRect
+
 var p1Score: int
 var p2Score: int
 
@@ -73,9 +76,30 @@ func siga_siga(decision1: int, decision2: int):
 	actionsContainer.add_child(new3)
 
 func updateDFA(p1DFAStatus: Array, p2DFAStatus: Array):
-	#unya nalang
+	if !GlobalVars.hasUser:
+		var p1NewDFA = "res://Assets/DFA_GameTheory/" + p1DFAStatus[2] \
+		+ "/" + str(p1DFAStatus[0]) + "/"
+		var decision1 
+		if p1DFAStatus[1] == 0:
+			decision1="CP.png"
+		else:
+			decision1="CH.png"
+		
+		if !FileAccess.file_exists(p1NewDFA+decision1):
+			decision1 = "CPCH.png"
+		p1DFA.set_texture(load(p1NewDFA+decision1))
 	
-	pass
+	var p2NewDFA = "res://Assets/DFA_GameTheory/" + p2DFAStatus[2] \
+	+ "/" + str(p2DFAStatus[0]) + "/"
+	var decision2
+	if p2DFAStatus[1] == 0:
+		decision2="CP.png"
+	else:
+		decision2="CH.png"
+	
+	if !FileAccess.file_exists(p2NewDFA+decision2):
+		decision2 = "CPCH.png"
+	p2DFA.set_texture(load(p2NewDFA+decision2))
 
 func scrollbar_change():
 	scrollContainer.set_h_scroll(scrollContainer.get_h_scroll_bar().max_value)

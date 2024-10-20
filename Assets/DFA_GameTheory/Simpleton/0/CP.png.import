@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2og887tjwtke"
-path="res://.godot/imported/CPCH.png-dd288df3659c7145d71ef0611f3cce9c.ctex"
+uid="uid://cxo2nwur6mxo1"
+path="res://.godot/imported/CP.png-e0b386e8c4b7ee20e43fde2185ddfacf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DFA_GameTheory/AlwaysCheats/1/CPCH.png"
-dest_files=["res://.godot/imported/CPCH.png-dd288df3659c7145d71ef0611f3cce9c.ctex"]
+source_file="res://Assets/DFA_GameTheory/Simpleton/0/CP.png"
+dest_files=["res://.godot/imported/CP.png-e0b386e8c4b7ee20e43fde2185ddfacf.ctex"]
 
 [params]
 

@@ -16,10 +16,16 @@ func _ready():
 func cooperateDecision():
 	player2.makeDecision()
 	player2.enemyDecision = 0
+	player2.update_dfaStatus(0)
 	decisionHandler.addDecisionToGUI(0, player2.chosenDecision())
+	var temp: Array = [0]
+	decisionHandler.updateDFA(temp, player2.get_dfaStatus())
 
 
 func cheatDecision():
 	player2.makeDecision()
 	player2.enemyDecision = 1
+	player2.update_dfaStatus(1)
 	decisionHandler.addDecisionToGUI(1, player2.chosenDecision())
+	var temp: Array = [0]
+	decisionHandler.updateDFA(temp, player2.get_dfaStatus())
