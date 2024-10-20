@@ -83,7 +83,7 @@ func CopykittenDecision():
 func SimpletonDecision():
 	decisionTable = [[0,1],[1,0]]
 
-func update_dfaStatus():
+func update_dfaStatus(enemyDecision):
 	dfaStatus[0] = currentState
 	dfaStatus[1] = enemyDecision
 	print(stratName+": ",dfaStatus)

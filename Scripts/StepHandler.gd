@@ -29,5 +29,5 @@ func decisionStep():
 	player1.makeDecision()
 	player2.makeDecision()
 	
-	player1.update_dfaStatus()
-	player2.update_dfaStatus()
+	player1.update_dfaStatus(player2.chosenDecision())
+	player2.update_dfaStatus(player1.chosenDecision())
