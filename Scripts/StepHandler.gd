@@ -20,6 +20,7 @@ func handleStep():
 	#Both players make decision
 	decisionStep()
 	decisionHandler.addDecisionToGUI(player1.chosenDecision(), player2.chosenDecision())
+	decisionHandler.updateDFA(player1.get_dfaStatus(), player2.get_dfaStatus())
 
 func decisionStep():
 	player1.enemyDecision = player2.chosenDecision()
@@ -27,3 +28,6 @@ func decisionStep():
 	
 	player1.makeDecision()
 	player2.makeDecision()
+	
+	player1.update_dfaStatus()
+	player2.update_dfaStatus()

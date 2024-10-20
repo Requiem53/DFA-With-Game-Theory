@@ -2,21 +2,23 @@ extends Node
 class_name NPCPlayer
 
 var stratName: String
-var decision: String
 var decisionToken: int
 var decisionTable: Array
 var decisionDecider: Array
 var enemyDecision: int
 var currentState: int
 var start: bool
-#remove later
-var decisionHistory: Array
+
+var dfaStatus: Array
+#Index 0: Current State
+#Index 1: Enemy Decision
 
 #For decisions:
 #0 - Cooperate
 #1 - Cheat
 func readyVars():
 	start = true
+	dfaStatus = [0,0]
 	decisionDecider = [0,1]
 	currentState = 0
 
@@ -42,14 +44,10 @@ func initializeStrat(strat: String):
 		SimpletonDecision()
 
 func cooperate():
-	decision = "Cooperate"
 	decisionToken = 0
-	decisionHistory.append(decision)
 
 func cheat():
-	decision = "Cheat"
 	decisionToken = 1
-	decisionHistory.append(decision)
 
 func chosenDecision():
 	return decisionToken
@@ -63,8 +61,6 @@ func makeDecision():
 		cooperate()
 	else:
 		cheat()
-	print(stratName+": ",decisionHistory)
-	#print(stratName+": ",currentState)
 
 func CopycatDecision():
 	decisionTable = [[0,1],[0,1]]
@@ -86,3 +82,11 @@ func CopykittenDecision():
 
 func SimpletonDecision():
 	decisionTable = [[0,1],[1,0]]
+
+func update_dfaStatus():
+	dfaStatus[0] = currentState
+	dfaStatus[1] = enemyDecision
+	print(stratName+": ",dfaStatus)
+
+func get_dfaStatus():
+	return dfaStatus

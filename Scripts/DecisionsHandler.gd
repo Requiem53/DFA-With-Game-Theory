@@ -72,5 +72,9 @@ func siga_siga(decision1: int, decision2: int):
 	new3.show()
 	actionsContainer.add_child(new3)
 
+func updateDFA(p1DFAStatus: Array, p2DFAStatus: Array):
+	
+	pass
+
 func scrollbar_change():
 	scrollContainer.set_h_scroll(scrollContainer.get_h_scroll_bar().max_value)
