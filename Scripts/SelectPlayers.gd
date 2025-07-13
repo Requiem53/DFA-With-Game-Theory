@@ -11,8 +11,8 @@ func _ready():
 		var chosenChara = child.get_child(0)
 		chosenChara.gui_input.connect(accessClicked.bind(chosenChara))
 	
-	unselectedStyle = preload("res://Scenes/Screens/UnselectedBorder.tres")
-	selectedStyle = preload("res://Scenes/Screens/SelectedBorder.tres")
+	unselectedStyle = load("res://Scenes/Screens/UnselectedBorder.tres")
+	selectedStyle = load("res://Scenes/Screens/SelectedBorder.tres")
 	
 	transitionButton.pressed.connect(assignPlayers)
 

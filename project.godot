@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Game Theory with DFA"
 run/main_scene="res://Scenes/Screens/PickWhoToPlayWith.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -27,10 +27,6 @@ window/stretch/aspect="ignore"
 [dotnet]
 
 project/assembly_name="Game Theory with DFA"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot-vim/plugin.cfg")
 
 [rendering]
 

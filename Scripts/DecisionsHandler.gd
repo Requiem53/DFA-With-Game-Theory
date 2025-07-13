@@ -84,8 +84,9 @@ func updateDFA(p1DFAStatus: Array, p2DFAStatus: Array):
 			decision1="CP.png"
 		else:
 			decision1="CH.png"
-		
-		if !FileAccess.file_exists(p1NewDFA+decision1):
+		print(p1NewDFA+decision1)
+		#if !FileAccess.file_exists(p1NewDFA+decision1):
+		if !ResourceLoader.exists(p1NewDFA+decision1):
 			decision1 = "CPCH.png"
 		p1DFA.set_texture(load(p1NewDFA+decision1))
 	
@@ -97,7 +98,7 @@ func updateDFA(p1DFAStatus: Array, p2DFAStatus: Array):
 	else:
 		decision2="CH.png"
 	
-	if !FileAccess.file_exists(p2NewDFA+decision2):
+	if !ResourceLoader.exists(p2NewDFA+decision2):
 		decision2 = "CPCH.png"
 	p2DFA.set_texture(load(p2NewDFA+decision2))
 

@@ -16,6 +16,3 @@ func switchTo1v1():
 	#get_tree().root.add_child(screen1v1)
 	#$"PickWhoToPlayWith".hide()
 	get_tree().change_scene_to_file("res://Scenes/Screens//1v1Screen.tscn")
-
-
-
